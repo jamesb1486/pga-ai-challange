@@ -269,3 +269,45 @@ LiveKit Agents successfully imported inside the project virtual
 environment.
 
 The Python environment is ready for initial agent development.
+
+## Phase 2B - Hosted Provider Stack Selection
+
+### Selected Initial Stack
+
+Speech-to-Text:
+Deepgram Nova-3
+
+Large Language Model:
+OpenAI text model
+
+Text-to-Speech:
+Deepgram Aura-2
+
+Voice Activity Detection:
+Silero VAD
+
+Telephony and Agent Framework:
+LiveKit Agents / LiveKit SIP
+
+### Reasoning
+
+Hosted services were selected instead of local inference because the
+assessment places high priority on conversational quality, response
+latency, and natural pacing.
+
+Deepgram was selected for speech recognition and synthesis because its
+LiveKit integration supports separate realtime STT and TTS components.
+
+OpenAI was selected for the language-model stage to provide fast,
+consistent conversational reasoning.
+
+Silero VAD was selected as an initial local voice-activity detector
+because it requires minimal system resources and does not add another
+hosted dependency.
+
+The architecture remains a cascaded:
+
+STT -> LLM -> TTS
+
+pipeline as required by the assessment. No realtime speech-to-speech
+model or hosted end-to-end voice-agent platform will be used.

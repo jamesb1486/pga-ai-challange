@@ -30,7 +30,6 @@ livekit-agents==1.8.2
 livekit-api==1.2.1
 livekit-blingfire==1.1.0
 livekit-local-inference==0.2.7
-livekit-plugins-deepgram==1.8.2
 livekit-plugins-openai==1.8.2
 livekit-plugins-silero==1.8.2
 livekit-protocol==1.1.27
